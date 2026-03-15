@@ -20,7 +20,7 @@ function Navbar() {
 
           {/* Logo */}
           <div className="nav-logo">
-            <img src="./src/assets/AS_logo.png" alt="logo" />
+            <img src="/AS_logo.png" alt="logo" />
             <a className="nav-brand" href="#top">
               Ankit Shinde<span>.</span>
             </a>

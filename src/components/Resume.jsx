@@ -9,13 +9,14 @@ function Resume() {
             education, and technical skills.
           </p>
           <a
-            href="./assets/Ankit_Shinde.pdf"
-            download
-            className="btn-accent"
-            style={{ display: "inline-flex", margin: "0 auto" }}
-          >
-            Download Resume ↓
-          </a>
+  href="/Ankit_Shinde.pdf"
+  download
+  className="btn-accent"
+  style={{ display: "inline-flex", margin: "0 auto" }}
+>
+  Download Resume ↓
+</a>
+
         </div>
       </div>
     </section>
