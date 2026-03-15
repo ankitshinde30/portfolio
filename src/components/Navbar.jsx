@@ -1,58 +1,68 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const links = ["About", "Skills", "Projects", "Experience", "Resume", "Contact"];
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div className="container">
+    <>
+      <nav className={`p-nav ${scrolled ? "scrolled" : ""}`}>
+        <div className="p-container nav-inner">
 
-        <a className="navbar-brand" href="#">
-          <i className="bi bi-code-slash"></i> Ankit Portfolio
-        </a>
+          {/* Logo */}
+          <div className="nav-logo">
+            <img src="./src/assets/AS_logo.png" alt="logo" />
+            <a className="nav-brand" href="#top">
+              Ankit Shinde<span>.</span>
+            </a>
+          </div>
 
-        <button
-          className="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="menu">
-
-          <ul className="navbar-nav ms-auto">
-
-            <li className="nav-item">
-              <a className="nav-link" href="#about">About</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#skills">Skills</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#projects">Projects</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#experience">Experience</a>
-            </li>
-
-            <li className="nav-item">
-  <a className="nav-link" href="#resume">Resume</a>
-</li>
-
-
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">Contact</a>
-            </li>
-            
-
+          {/* Desktop Links */}
+          <ul className="nav-links">
+            {links.map((link) => (
+              <li key={link}>
+                <a href={`#${link.toLowerCase()}`}>
+                  {link}
+                </a>
+              </li>
+            ))}
           </ul>
 
-        </div>
+          {/* Mobile Button */}
+          <button
+            className="nav-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
 
-      </div>
-    </nav>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        {links.map((link) => (
+          <li key={link}>
+            <a
+              href={`#${link.toLowerCase()}`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {link}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 

@@ -1,9 +1,8 @@
-import React from "react";
-
 function Footer() {
   return (
-    <footer className="text-center p-3 bg-secondary text-white">
-      © 2026 Ankit Shinde Portfolio
+    <footer className="p-footer">
+      Designed &amp; built with <em>&hearts;</em> by{" "}
+      <span>Ankit Shinde</span> · © {new Date().getFullYear()}
     </footer>
   );
 }
