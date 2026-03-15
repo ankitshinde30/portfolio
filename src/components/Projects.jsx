@@ -1,76 +1,63 @@
-import React from "react";
-
 function Projects() {
-
   const projects = [
-
     {
       title: "E-commerce Website",
-      description:
-        "Built using MERN Stack with authentication, product listing, wishlist and inventory management.",
-      github: "https://github.com/ankitshinde30/P4_E-commerce.git/"
+      desc: "Full-featured MERN Stack app with JWT authentication, product listing, wishlist, and inventory management.",
+      tech: ["React", "Node.js", "MongoDB", "Express"],
+      github: "https://github.com/ankitshinde30/P4_E-commerce.git/",
+      icon: "🛒",
     },
-
     {
       title: "Weather App",
-      description:
-        "React weather application using OpenWeatherMap API with Axios and React Hooks.",
-      github: "https://github.com/ankitshinde30/Weather-app-ReactJS"
+      desc: "React weather application using the OpenWeatherMap API with Axios, React Hooks, and live forecasts.",
+      tech: ["React", "Axios", "OpenWeatherMap"],
+      github: "https://github.com/ankitshinde30/Weather-app-ReactJS",
+      icon: "🌤",
     },
-
     {
-      title: "React-Uncontrolled-Form",
-      description:
-        "A React application demonstrating the use of uncontrolled components for form handling.",
-      github: "https://github.com/ankitshinde30/React-Uncontrolled-Form"
-    }
-
+      title: "Uncontrolled Form",
+      desc: "A React application demonstrating uncontrolled components and refs for efficient form handling.",
+      tech: ["React", "JavaScript", "CSS"],
+      github: "https://github.com/ankitshinde30/React-Uncontrolled-Form",
+      icon: "📝",
+    },
   ];
 
   return (
-    <section id="projects" className="py-5">
+    <section id="projects" className="p-section">
+      <div className="p-container">
+        <span className="section-label reveal">What I've Built</span>
+        <h2 className="section-title reveal reveal-d1">Projects</h2>
 
-      <div className="container">
-
-        <h2 className="text-center mb-5">
-          <i className="bi bi-kanban"></i> Projects
-        </h2>
-
-        <div className="row g-4">
-
-          {projects.map((project, index) => (
-
-            <div className="col-md-6 col-lg-4 d-flex" key={index}>
-
-              <div className="card shadow project-card w-100">
-
-                <div className="card-body d-flex flex-column">
-
-                  <h5 className="card-title">{project.title}</h5>
-
-                  <p className="card-text flex-grow-1">
-                    {project.description}
-                  </p>
-
-                  <a
-                    href={project.github}
-                    className="btn btn-dark mt-auto"
-                  >
-                    <i className="bi bi-github"></i> View Code
-                  </a>
-
-                </div>
-
+        <div className="projects-grid">
+          {projects.map((p, i) => (
+            <div className={`proj-card reveal reveal-d${i + 1}`} key={p.title}>
+              <div className="proj-head">
+                <div className="proj-icon">{p.icon}</div>
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="proj-link"
+                >
+                  GitHub ↗
+                </a>
               </div>
 
+              <h3 className="proj-title">{p.title}</h3>
+              <p className="proj-desc">{p.desc}</p>
+
+              <div className="proj-tech">
+                {p.tech.map((t) => (
+                  <span className="tech-tag" key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

@@ -1,33 +1,55 @@
-import React from "react";
-
 function Contact() {
   return (
-    <section id="contact" className="bg-dark text-white py-5">
+    <section id="contact" className="p-section contact-bg">
+      <div className="p-container">
+        <div className="contact-grid">
+          <div className="contact-intro">
+            <span className="section-label reveal">Get In Touch</span>
+            <h2 className="section-title reveal reveal-d1">Let's Connect</h2>
+            <p className="reveal reveal-d2">
+              I'm currently open to full-time roles and freelance projects.
+              Whether you have a question or just want to say hi — my inbox is
+              always open!
+            </p>
+          </div>
 
-      <div className="container text-center">
+          <div className="contact-items reveal reveal-d2">
+            <a
+              href="mailto:ankit.shinde2611@gmail.com"
+              className="contact-item"
+            >
+              <div className="c-icon">✉</div>
+              ankit.shinde2611@gmail.com
+            </a>
 
-        <h2 className="mb-4">
-          <i className="bi bi-envelope"></i> Contact
-        </h2>
+            <a href="tel:+919867668071" className="contact-item">
+              <div className="c-icon">📞</div>
+              +91 9867 668 071
+            </a>
 
-        <p>
-          Email: ankit.shinde2611@gmail.com
-        </p>
-
-        <p>
-          Phone: +91 9867668071
-        </p>
-
-        <div>
-
-          <i className="bi bi-github m-2 fs-3"></i>
-
-          <i className="bi bi-linkedin m-2 fs-3"></i>
-
+            <div className="social-row">
+              <a
+                href="https://github.com/ankitshinde30"
+                target="_blank"
+                rel="noreferrer"
+                className="social-btn"
+                title="GitHub"
+              >
+                GH
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                className="social-btn"
+                title="LinkedIn"
+              >
+                LI
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </section>
   );
 }
