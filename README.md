@@ -1,16 +1,104 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio website built using React to showcase my skills, projects, and experience.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+View the live website here: [https://portfolio-assignment-eta-snowy.vercel.app](https://portfolio-assignment-eta-snowy.vercel.app)
 
-## React Compiler
+Deployed using Vercel.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Responsive design for desktop and mobile
+- Smooth navigation with scroll effects
+- About section with personal introduction
+- Skills section highlighting technologies
+- Projects showcase
+- Experience and education details
+- Downloadable resume
+- Contact section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+**Frontend:**
+- ⚛️ React
+- ⚡ Vite
+- 🎨 CSS
+
+**Tools:**
+- 🗂️ Git
+- 🌍 GitHub
+- 🚀 Vercel
+
+## 📂 Project Structure
+
+```
+portfolio-assignment
+│
+├── public
+│   ├── AS_logo.png
+│   ├── Ankit_Shinde.pdf
+│
+├── src
+│   ├── components
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Resume.jsx
+│   │   ├── Skills.jsx
+│
+├── App.jsx
+├── main.jsx
+```
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ankitshinde30/portfolio.git
+```
+
+Go to the project directory:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## 📄 Resume
+
+You can download my resume directly from the portfolio website.
+
+## 👨‍💻 Author
+
+**Ankit Shinde**  
+Aspiring Full Stack Developer passionate about building scalable web applications using modern technologies.
+
+## 📬 Contact
+
+If you'd like to collaborate or connect:
+
+- **GitHub:** [https://github.com/ankitshinde30](https://github.com/ankitshinde30)
+- **Email:** *ankit.shinde2611@gmail.com*
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
